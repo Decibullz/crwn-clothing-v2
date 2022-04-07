@@ -40,6 +40,8 @@ const SignUpForm = () => {
     } catch (error) {
       if (error.code === 'auth/email-already-in-use') {
         alert('Email already in use')
+      } else if (error.code === 'auth/weak-password') {
+        alert('Password must be 6 characters')
       } else console.error(error)
     }
   }
