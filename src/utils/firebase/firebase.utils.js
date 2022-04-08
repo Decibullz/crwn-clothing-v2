@@ -8,15 +8,10 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
+  onAuthStateChanged,
 } from 'firebase/auth'
 
-import {
-  getFirestore,
-  doc,
-  getDoc,
-  Firestore,
-  setDoc,
-} from 'firebase/firestore'
+import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCnACwBy9wjBqklVU5MN1A0qnfHPVu25EI',
@@ -29,6 +24,7 @@ const firebaseConfig = {
 }
 
 // Initialize Firebase
+// eslint-disable-next-line
 const firebaseApp = initializeApp(firebaseConfig)
 
 const provider = new GoogleAuthProvider()
@@ -78,4 +74,8 @@ export const SignInAuthUserWithEmailAndPassword = async (email, password) => {
 
 export const signOutUser = () => {
   signOut(auth)
+}
+
+export const onAuthStateChangedListener = (callback) => {
+  onAuthStateChanged(auth, callback)
 }
