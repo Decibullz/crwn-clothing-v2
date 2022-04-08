@@ -6,8 +6,8 @@ import SignUpForm from '../sign-up-form/sign-up-form.component'
 const Authentication = () => {
   return (
     <div className="authentication-container">
-      <SignUpForm />
       <SignInForm />
+      <SignUpForm />
     </div>
   )
 }
