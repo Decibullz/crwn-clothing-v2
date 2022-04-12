@@ -1,11 +1,10 @@
-import { useContext, useId } from 'react'
+import { useContext } from 'react'
 import CheckoutItem from '../../components/checkout-item/checkout-item'
 import { CartContext } from '../../contexts/cart.context'
 import './checkout.styles.scss'
 
 const Checkout = () => {
   const { cartItems } = useContext(CartContext)
-  const keyId = useId()
 
   return (
     <div className="checkout-container">
@@ -27,7 +26,7 @@ const Checkout = () => {
         </div>
       </div>
       {cartItems.map((cartItem) => (
-        <CheckoutItem key={keyId} cartItem={cartItem} />
+        <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
       <span className="total">Total : 0</span>
     </div>
