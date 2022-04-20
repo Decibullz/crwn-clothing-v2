@@ -10,3 +10,9 @@
     font-size: 38px;
     margin-bottom: 25px;
 }
+.categories-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
