@@ -1,10 +1,7 @@
 // eslint-disable-next-line
 import { createContext, useState, useEffect } from 'react'
 // eslint-disable-next-line
-import {
-  addCollectionsAndDocuments,
-  getCategoriesAndDocuments,
-} from '../utils/firebase/firebase.utils.js'
+import { getCategoriesAndDocuments } from '../utils/firebase/firebase.utils.js'
 
 // only used to push data to firebase
 // import SHOP_DATA from '../shop-data.js'
